@@ -55,7 +55,7 @@ git switch main
 # Pull mã nguồn từ main
 git pull origin main
 
-# Tiếp tục vòng lặp khi quay tạo branch mới và thực hiện các thay đổi
+# Tiếp tục vòng lặp khi quay lại tạo branch mới và thực hiện các thay đổi
 ```
 
 > [! NOTE]
@@ -70,5 +70,7 @@ git pull origin main
 >
 > Khi đặt tên file tránh sử dụng chữ hoa, hãy sử dụng chữ thường và dấu gạch nối,
 > ví dụ: `button.svelte` hoặc `navbar-button.svelte`
-> nên tránh: `Button.svelte` hoặc `NavBarButton.svelte`
-> Giúp giữ tính nhất quán của toàn bộ mã nguồn
+> nên tránh: `Button.svelte` hoặc `NavBarButton.svelte`,
+> và import đã hỗ trợ `@/` aliases ở đầu mỗi import nên hãy sử dụng nó nhiều nhất có thể
+> ví dụ `import { hello } from "@/lib/world"` thay vì `import { hello } from "../lib/world"`.
+> **Giúp giữ tính nhất quán của toàn bộ mã nguồn**
