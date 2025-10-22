@@ -1,8 +1,8 @@
-# UITKnowledgeWeb
+# UIT Knowledge Web
 
 ## TLDR;
 
-- Đây là dự án trang web dành cho kênh [youtube](https://www.youtube.com/@UIT_Knowledge).
+- Đây là dự án trang web dành cho kênh youtube [UIT Knowledge](https://www.youtube.com/@UIT_Knowledge).
 
 ## Techstack
 
@@ -73,4 +73,5 @@ git pull origin main
 > nên tránh: `Button.svelte` hoặc `NavBarButton.svelte`,
 > và import đã hỗ trợ `@/` aliases ở đầu mỗi import nên hãy sử dụng nó nhiều nhất có thể
 > ví dụ `import { hello } from "@/lib/world"` thay vì `import { hello } from "../lib/world"`.
+>
 > **Giúp giữ tính nhất quán của toàn bộ mã nguồn**
