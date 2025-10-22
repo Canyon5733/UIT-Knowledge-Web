@@ -1,9 +1,22 @@
 {
   "name": "uit-knowledge-web",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "description": "A web project for UIT Knowledge built with Astro.",
+  "keywords": [
+    "astro",
+    "uit",
+    "knowledge",
+    "web"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Canyon5733/UIT-Knowledge-Web.git"
+  },
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --open",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
