@@ -58,7 +58,7 @@ git pull origin main
 # Tiếp tục vòng lặp khi quay lại tạo branch mới và thực hiện các thay đổi
 ```
 
-> [! NOTE]
+> [!NOTE]
 > Owner/Canyon trước khi merge các branch vào `main` để commit
 > nên review code trước và call qua Discord/Messenger để
 > xem kết quả dev, hỏi ý kiến của người tạo issue/branch qua inbox riêng.
