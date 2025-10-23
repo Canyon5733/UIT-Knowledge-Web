@@ -1,0 +1,23 @@
+---
+import { NavBar } from '@/components/index';
+
+import '../styles/global.css';
+
+const currentPathname = Astro.url.pathname;
+---
+
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>UIT Knowledge</title>
+  </head>
+  <body>
+    <NavBar client:load currentPathname={currentPathname} />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

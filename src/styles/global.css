@@ -1,2 +1,14 @@
+@import '@fontsource-variable/inter';
+
 @import 'tailwindcss';
 @plugin 'daisyui';
+
+@theme {
+  --font-inter: 'Inter Variable', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-inter;
+  }
+}

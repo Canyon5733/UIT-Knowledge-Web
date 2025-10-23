@@ -1,3 +1,1 @@
-import TestButton from './test-button.svelte';
-
-export { TestButton };
+export * from './navbar';
