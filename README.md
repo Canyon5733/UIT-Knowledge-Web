@@ -67,7 +67,7 @@ git pull origin main
 > báo trước sẽ có commit/merge.
 >
 > Các trang và components thì sử dụng `.astro`.
-> Những components nào cần **interactivity (sự tương tác)** thì sử dụng .svelte
+> Những components nào cần **interactivity (sự tương tác)** thì sử dụng `.svelte`.
 >
 > Khi đặt tên file tránh sử dụng chữ hoa, hãy sử dụng chữ thường và dấu gạch nối,
 > ví dụ: `button.svelte` hoặc `navbar-button.svelte`
