@@ -1,5 +1,5 @@
 ---
-import { NavBar } from '@/components/index';
+import { NavBar, Footer } from '@/components/index';
 
 import '../styles/global.css';
 
@@ -19,5 +19,6 @@ const currentPathname = Astro.url.pathname;
     <main>
       <slot />
     </main>
+    <Footer />
   </body>
 </html>
