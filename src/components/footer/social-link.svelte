@@ -13,7 +13,7 @@
   target="_blank"
   rel="noopener noreferrer"
   aria-label={label}
-  class="text-slate-900 hover:text-purple-600 transition-colors duration-300 w-10 h-10 inline-block"
+  class="text-base-content hover:text-primary transition-colors duration-300 w-10 h-10 inline-block"
 >
   {#if icon === 'facebook'}
     <svg

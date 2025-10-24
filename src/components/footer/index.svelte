@@ -13,7 +13,7 @@
 
 <footer
   class={cn(
-    'mt-20 border-t-2 border-slate-900 bg-slate-50 py-12 text-slate-900',
+    'mt-20 border-t-2 border-base-content/20 bg-base-100 py-12 text-base-content',
     className
   )}
 >
@@ -23,11 +23,13 @@
       <!-- Brand Section -->
       <div class="md:col-span-1">
         <a href="/" class="inline-block">
-          <span class="text-2xl font-extrabold tracking-tighter font-jb">
+          <span
+            class="text-2xl font-extrabold tracking-tighter font-jb text-base-content"
+          >
             UIT Knowledge
           </span>
         </a>
-        <p class="mt-4 text-sm text-slate-600">
+        <p class="mt-4 text-sm text-base-content/70">
           Tài liệu học tập cho sinh viên UIT.
         </p>
         <!-- Social Links (Refactored) -->
@@ -45,7 +47,7 @@
       <!-- Footer Sections -->
       {#each sections as section (section.title)}
         <div>
-          <h3 class="font-bold text-slate-900 mb-4">{section.title}</h3>
+          <h3 class="font-bold text-base-content mb-4">{section.title}</h3>
           <ul class="space-y-3">
             {#each section.links as link (link.label)}
               <li>
@@ -59,12 +61,14 @@
 
     <!-- Newsletter Section -->
     <div
-      class="rounded-lg border-2 border-slate-900 bg-white px-6 py-8 md:px-8"
+      class="rounded-lg border-2 border-base-content/20 bg-base-200 px-6 py-8 md:px-8"
     >
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 items-center">
         <div>
-          <h3 class="text-xl font-bold mb-2">Đăng ký nhận tin</h3>
-          <p class="text-sm text-slate-600">
+          <h3 class="text-xl font-bold mb-2 text-base-content">
+            Đăng ký nhận tin
+          </h3>
+          <p class="text-sm text-base-content/70">
             Nhận thông tin về tài liệu học tập mới nhất.
           </p>
         </div>
@@ -75,15 +79,15 @@
           <input
             type="email"
             placeholder="Email của bạn"
-            class="flex-1 rounded border-2 border-slate-900 px-4 py-2 focus:outline-none focus:bg-purple-50"
+            class="flex-1 rounded border-2 border-base-content/20 bg-base-100 px-4 py-2 text-base-content placeholder-base-content/50 focus:outline-none focus:border-primary focus:bg-base-100"
             required
           />
           <button
             type="submit"
-            class="group relative flex items-center justify-center overflow-hidden rounded border-2 border-slate-900 bg-slate-50 px-4 py-2 font-bold transition-transform ease-out hover:scale-105"
+            class="group relative flex items-center justify-center overflow-hidden rounded border-2 border-base-content/20 bg-base-100 px-4 py-2 font-bold text-base-content transition-transform ease-out hover:scale-105"
           >
             <span
-              class="absolute inset-0 z-0 h-full rounded bg-purple-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0 translate-y-9"
+              class="absolute inset-0 z-0 h-full rounded bg-primary/30 transition-transform duration-300 ease-in-out group-hover:translate-y-0 translate-y-9"
             ></span>
             <span class="relative">Đăng ký</span>
           </button>
@@ -93,21 +97,21 @@
 
     <!-- Bottom Footer -->
     <div
-      class="mt-12 border-t-2 border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+      class="mt-12 border-t-2 border-base-content/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
     >
-      <p class="text-sm text-slate-600">
+      <p class="text-sm text-base-content/70">
         © 2025 UIT Knowledge. Tất cả quyền được bảo lưu.
       </p>
       <div class="flex gap-6">
         <a
           href="/privacy"
-          class="text-sm text-slate-600 hover:text-slate-900 transition-colors"
+          class="text-sm text-base-content/70 hover:text-base-content transition-colors"
         >
           Chính sách bảo mật
         </a>
         <a
           href="/terms"
-          class="text-sm text-slate-600 hover:text-slate-900 transition-colors"
+          class="text-sm text-base-content/70 hover:text-base-content transition-colors"
         >
           Điều khoản sử dụng
         </a>
