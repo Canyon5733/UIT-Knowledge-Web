@@ -6,7 +6,7 @@ export const links: { label: string; url: string }[] = [
 export interface SocialLink {
   href: string;
   label: string;
-  icon: 'facebook' | 'youtube';
+  icon: 'facebook' | 'youtube' | 'github';
 }
 
 export const socialLinks: SocialLink[] = [
@@ -19,6 +19,11 @@ export const socialLinks: SocialLink[] = [
     href: 'https://www.youtube.com/@UIT_Knowledge',
     label: 'YouTube',
     icon: 'youtube',
+  },
+  {
+    href: 'https://github.com/Canyon5733/UIT-Knowledge-Web',
+    label: 'Github',
+    icon: 'github',
   },
 ];
 

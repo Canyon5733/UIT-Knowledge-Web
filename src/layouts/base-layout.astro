@@ -7,6 +7,11 @@ import '../styles/global.css';
 const currentPathname = Astro.url.pathname;
 ---
 
+<script>
+  import { initializeTheme } from '@/lib/theme';
+  initializeTheme();
+</script>
+
 <html lang="vi" data-theme="dark">
   <head>
     <meta charset="utf-8" />

@@ -1,9 +1,9 @@
 <script lang="ts">
   import { links } from '@/lib/constants';
-  import { cn } from '@/lib/utils';
   import Icon from '@iconify/svelte';
   import NavBarLink from './navbar-link.svelte';
   import ContactButton from './contact-button.svelte';
+  import Lightswitch from './lightswitch.svelte';
 
   let open = $state(false);
   let { currentPathname }: { currentPathname: string } = $props();
@@ -13,35 +13,36 @@
   }
 </script>
 
-<header class="top-0 z-50 p-2 sm:p-4 relative">
+<header class="top-0 z-50 p-4 relative">
   <nav class="max-w-7xl mx-auto">
     <div
-      class="flex flex-col justify-between rounded-b-lg bg-base-100 text-base-content px-4 py-2 md:flex-row md:items-center md:rounded-xl"
+      class="flex bg-base-100 items-center gap-4 text-base-content flex-row md:items-center md:rounded-xl"
     >
-      <div class="flex items-center justify-between">
-        <a
-          href="/"
-          aria-label="Homepage"
-          class="text-xl font-extrabold tracking-tighter"
-        >
-          UIT Knowledge
-        </a>
-        <button
-          aria-expanded={open}
-          aria-label="Open Menu"
-          class="text-lg md:hidden"
-          onclick={() => (open = true)}
-        >
-          <Icon icon="lucide:menu" />
-        </button>
-      </div>
+      <a
+        href="/"
+        aria-label="Homepage"
+        class="text-xl flex-1 font-extrabold tracking-tighter"
+      >
+        UIT Knowledge
+      </a>
+
+      <Lightswitch />
+
+      <button
+        aria-expanded={open}
+        aria-label="Open Menu"
+        class="text-lg md:hidden"
+        onclick={() => (open = true)}
+      >
+        <Icon icon="lucide:menu" />
+      </button>
 
       <!-- Mobile NavBar -->
       <ul
-        class={cn(
-          'fixed inset-0 z-50 flex flex-col items-end gap-4 bg-base-200 text-base-content pr-4 pt-14 transition-transform duration-300 ease-in-out md:hidden',
-          open ? 'translate-x-0' : 'translate-x-full'
-        )}
+        class={[
+          'fixed inset-0 z-50 flex flex-col items-end gap-4 bg-base-200/90 backdrop-blur-xl text-base-content pr-4 pt-14 transition-transform duration-300 ease-in-out md:hidden',
+          open ? 'translate-x-0' : 'translate-x-full',
+        ]}
       >
         <li>
           <button
