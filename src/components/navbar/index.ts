@@ -1,5 +1,3 @@
-import NavBar from './index.svelte';
-import NavBarLink from './navbar-link.svelte';
-import ContactButton from './contact-button.svelte';
-
-export { NavBar, NavBarLink, ContactButton };
+export { default as NavBar } from './index.svelte';
+export { default as NavBarLink } from './navbar-link.svelte';
+export { default as ContactButton } from './contact-button.svelte';

@@ -5,31 +5,31 @@
   import NavBarLink from './navbar-link.svelte';
   import ContactButton from './contact-button.svelte';
 
-  let open = $state<boolean>(false);
-  const { currentPathname }: { currentPathname: string } = $props();
+  let open = $state(false);
+  let { currentPathname }: { currentPathname: string } = $props();
 
   function onLinkClick() {
     open = false;
   }
 </script>
 
-<header class="top-0 z-50 mx-auto max-w-7xl md:sticky md:top-4 relative">
-  <nav>
+<header class="top-0 z-50 p-2 sm:p-4 relative">
+  <nav class="max-w-7xl mx-auto">
     <div
-      class="flex flex-col justify-between rounded-b-lg bg-slate-50 px-4 py-2 md:flex-row md:items-center md:rounded-xl"
+      class="flex flex-col justify-between rounded-b-lg bg-base-100 text-base-content px-4 py-2 md:flex-row md:items-center md:rounded-xl"
     >
       <div class="flex items-center justify-between">
         <a
           href="/"
           aria-label="Homepage"
-          class="text-xl font-extrabold tracking-tighter text-slate-900 font-jb"
+          class="text-xl font-extrabold tracking-tighter"
         >
           UIT Knowledge
         </a>
         <button
           aria-expanded={open}
           aria-label="Open Menu"
-          class="block p-2 text-2xl text-slate-800 md:hidden"
+          class="text-lg md:hidden"
           onclick={() => (open = true)}
         >
           <Icon icon="lucide:menu" />
@@ -39,7 +39,7 @@
       <!-- Mobile NavBar -->
       <ul
         class={cn(
-          'fixed inset-0 z-50 flex flex-col items-end gap-4 bg-slate-50 pr-4 pt-14 transition-transform duration-300 ease-in-out md:hidden',
+          'fixed inset-0 z-50 flex flex-col items-end gap-4 bg-base-200 text-base-content pr-4 pt-14 transition-transform duration-300 ease-in-out md:hidden',
           open ? 'translate-x-0' : 'translate-x-full'
         )}
       >
@@ -47,7 +47,7 @@
           <button
             aria-expanded={open}
             aria-label="Close Menu"
-            class="fixed right-4 top-3 block p-2 text-2xl text-slate-800 md:hidden"
+            class="fixed right-4 top-3 block p-2 text-2xl md:hidden"
             onclick={() => (open = false)}
           >
             <Icon icon="lucide:x" />

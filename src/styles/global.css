@@ -1,7 +1,9 @@
 @import '@fontsource-variable/inter';
-
 @import 'tailwindcss';
-@plugin 'daisyui';
+@import './theme.css';
+@plugin 'daisyui' {
+  themes: light, dark;
+}
 
 @theme {
   --font-inter: 'Inter Variable', sans-serif;

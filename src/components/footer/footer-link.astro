@@ -1,0 +1,19 @@
+---
+export interface Props {
+  href: string;
+  label: string;
+}
+const { href, label } = Astro.props;
+---
+
+<a
+  {href}
+  class="group text-base-content/70 hover:text-base-content relative inline-block overflow-hidden text-sm transition-colors"
+>
+  <span class="relative">
+    {label}
+    <span
+      class="bg-primary/40 absolute bottom-0 left-0 h-0.5 w-0 transition-all duration-300 ease-in-out group-hover:w-full"
+    ></span>
+  </span>
+</a>

@@ -3,7 +3,7 @@ export const links: { label: string; url: string }[] = [
   { label: 'Tài liệu', url: '/docs' },
 ];
 
-interface SocialLink {
+export interface SocialLink {
   href: string;
   label: string;
   icon: 'facebook' | 'youtube';
