@@ -1,7 +1,10 @@
 ---
 import BaseLayout from '@/layouts/base-layout.astro';
+import { FAQ } from '@/components/faq';
+
+import { faqs } from '@/lib/constants';
 ---
 
 <BaseLayout>
-  <h1>Hello Frontpage</h1>
+  <FAQ faqs={faqs} />
 </BaseLayout>

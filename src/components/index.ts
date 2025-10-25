@@ -1,3 +1,3 @@
 export * from './navbar';
 export * from './footer';
-export * from './FAQ';
+export * from './faq';

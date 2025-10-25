@@ -55,7 +55,7 @@ export const sections = [
   },
 ];
 
-export const faqs = [
+export const faqs: { question: string; answer: string }[] = [
   {
     question: 'UIT Knowledge là gì?',
     answer:

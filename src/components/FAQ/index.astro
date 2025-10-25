@@ -4,10 +4,10 @@ import FaqItem from './faq-item.astro';
 
 interface Props {
   class?: string;
-  faqs: Array<{
+  faqs: {
     question: string;
     answer: string;
-  }>;
+  }[];
 }
 
 const { class: className, faqs } = Astro.props;

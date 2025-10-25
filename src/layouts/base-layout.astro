@@ -1,8 +1,6 @@
 ---
 import { NavBar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
-import { FAQ } from '@/components/FAQ';
-import { faqs } from '@/lib/constants';
 
 import '../styles/global.css';
 
@@ -25,11 +23,10 @@ const currentPathname = Astro.url.pathname;
   <body>
     <div class="flex h-svh w-full flex-col items-stretch">
       <NavBar client:load currentPathname={currentPathname} />
-      <main class="flex-1">
-        <slot />
-      </main>
     </div>
-    <FAQ faqs={faqs} />
+    <main class="flex-1">
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
