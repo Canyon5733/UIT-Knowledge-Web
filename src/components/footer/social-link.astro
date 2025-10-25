@@ -1,0 +1,20 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { SocialLink } from '@/lib/constants';
+
+interface Props {
+  link: SocialLink;
+}
+
+const { link } = Astro.props;
+---
+
+<a
+  href={link.href}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={link.label}
+  class="text-base-content hover:text-primary inline-block text-xl transition-colors duration-300"
+>
+  <Icon name={`fa7-brands:${link.icon}`} />
+</a>

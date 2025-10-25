@@ -1,7 +1,6 @@
 // Template from github.com/rice-cracker-dev/rice-dev.tech
 
 /** @type {import("prettier").Config} */
-
 export default {
   semi: true,
   singleQuote: true,
@@ -21,7 +20,6 @@ export default {
         parser: 'astro',
       },
     },
-
     { files: '*.svelte', options: { parser: 'svelte' } },
   ],
 };

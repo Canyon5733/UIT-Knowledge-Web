@@ -1,18 +1,12 @@
 ---
-import { TestButton } from '@/components/index';
-import '../styles/global.css';
+import BaseLayout from '@/layouts/base-layout.astro';
+import { Hero } from '@/components/hero';
+import { FAQ } from '@/components/faq';
+
+import { faqs } from '@/lib/constants';
 ---
 
-<html lang="vi">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>UIT Knowledge</h1>
-    <TestButton />
-  </body>
-</html>
+<BaseLayout>
+  <Hero />
+  <FAQ faqs={faqs} />
+</BaseLayout>

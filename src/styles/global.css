@@ -1,2 +1,22 @@
+@import '@fontsource-variable/inter';
+
 @import 'tailwindcss';
-@plugin 'daisyui';
+@import './theme.css';
+
+@plugin 'daisyui' {
+  themes: light, dark;
+}
+
+@theme {
+  --font-inter: 'Inter Variable', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-inter;
+  }
+}

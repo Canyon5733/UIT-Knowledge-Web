@@ -26,14 +26,22 @@
   },
   "dependencies": {
     "@astrojs/svelte": "^7.2.0",
+    "@astrojs/ts-plugin": "^1.10.5",
+    "@fontsource-variable/inter": "^5.2.8",
+    "@iconify/svelte": "^5.0.2",
     "@tailwindcss/vite": "^4.1.15",
     "astro": "^5.14.6",
+    "astro-icon": "^1.1.5",
+    "clsx": "^2.1.1",
     "daisyui": "^5.3.7",
     "svelte": "^5.41.1",
+    "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.15"
   },
   "devDependencies": {
     "@eslint/js": "^9.38.0",
+    "@iconify-json/fa7-brands": "^1.2.0",
+    "@iconify-json/lucide": "^1.2.71",
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.3.1",

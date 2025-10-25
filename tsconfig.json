@@ -4,10 +4,16 @@
   "exclude": ["dist"],
 
   "compilerOptions": {
+    "verbatimModuleSyntax": true,
     "paths": {
       "@/components/*": ["./src/components/*"],
       "@/layouts/*": ["./src/layouts/*"],
       "@/lib/*": ["./src/lib/*"]
-    }
+    },
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ]
   }
 }
