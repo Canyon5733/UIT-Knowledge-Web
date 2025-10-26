@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/base-layout.astro';
 import { Hero } from '@/components/hero';
+import { Target } from '@/components/target';
 import { FAQ } from '@/components/faq';
 
 import { faqs } from '@/lib/constants';
@@ -8,5 +9,6 @@ import { faqs } from '@/lib/constants';
 
 <BaseLayout>
   <Hero />
+  <Target />
   <FAQ faqs={faqs} />
 </BaseLayout>

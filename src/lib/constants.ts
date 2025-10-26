@@ -77,3 +77,41 @@ export const faqs: { question: string; answer: string }[] = [
       'Phần lớn tài liệu cơ bản được cung cấp miễn phí trên website. Một số tài liệu chuyên sâu hoặc đề thi có đáp án chi tiết có thể có phí để duy trì hoạt động của dự án.',
   },
 ];
+export const targets = [
+  {
+    title: 'Sinh viên UIT',
+    description:
+      'Tài liệu học tập, đề thi, bài giảng và hướng dẫn chuyên biệt dành cho sinh viên Đại học Công nghệ Thông tin - ĐHQG TP.HCM',
+    icon: 'graduation-cap' as const,
+    features: [
+      'Tài liệu môn học UIT',
+      'Đề thi các năm',
+      'Lộ trình học tập',
+      'Kinh nghiệm sinh viên',
+    ],
+  },
+  {
+    title: 'Học sinh THPT',
+    description:
+      'Tài liệu Toán học chất lượng, bài tập và đề thi THPT, giúp học sinh ôn luyện và chuẩn bị tốt cho kỳ thi đại học',
+    icon: 'book' as const,
+    features: [
+      'Tài liệu Toán THPT',
+      'Đề thi thử đại học',
+      'Bài giảng chi tiết',
+      'Luyện tập nâng cao',
+    ],
+  },
+  {
+    title: 'Người yêu IT',
+    description:
+      'Cộng đồng đam mê công nghệ với các sản phẩm IT độc đáo, áo thun, phụ kiện và cơ hội đóng góp cho dự án',
+    icon: 'heart' as const,
+    features: [
+      'Áo thun IT độc đáo',
+      'Phụ kiện công nghệ',
+      'Cộng đồng nhiệt huyết',
+      'Donate & Hỗ trợ dự án',
+    ],
+  },
+];
