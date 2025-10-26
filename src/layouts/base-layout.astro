@@ -1,0 +1,36 @@
+---
+import { NavBar } from '@/components/navbar';
+import { Footer } from '@/components/footer';
+
+import '../styles/global.css';
+
+const currentPathname = Astro.url.pathname;
+---
+
+<script>
+  import { initializeTheme } from '@/lib/theme';
+  initializeTheme();
+</script>
+
+<html lang="vi" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>UIT Knowledge</title>
+    <script
+      is:inline
+      src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="flex h-svh w-full flex-col items-stretch">
+      <NavBar client:load currentPathname={currentPathname} />
+    </div>
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
