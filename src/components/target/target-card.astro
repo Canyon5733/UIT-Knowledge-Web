@@ -8,17 +8,10 @@ interface Props {
 
 const { title, description, icon, features } = Astro.props;
 
-const icons = {
-  'graduation-cap': `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-  </svg>`,
-  book: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
-  </svg>`,
-  heart: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-  </svg>`,
+const iconMap = {
+  'graduation-cap': 'lucide:graduation-cap',
+  book: 'lucide:book-open',
+  heart: 'lucide:heart',
 };
 ---
 
@@ -29,9 +22,10 @@ const icons = {
   <div
     class="border-base-content/20 bg-base-200 group-hover:border-primary/40 group-hover:bg-primary/10 mb-6 inline-flex items-center justify-center rounded-lg border-2 p-4 transition-all duration-300"
   >
-    <div class="text-base-content group-hover:text-primary transition-colors">
-      <Fragment set:html={icons[icon]} />
-    </div>
+    <iconify-icon
+      icon={iconMap[icon]}
+      class="text-base-content group-hover:text-primary transition-colors"
+      style="font-size: 48px;"></iconify-icon>
   </div>
 
   <!-- Title -->
@@ -51,20 +45,11 @@ const icons = {
     {
       features.map((feature) => (
         <li class="flex items-start gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+          <iconify-icon
+            icon="lucide:check"
             class="text-primary mt-0.5 shrink-0"
-          >
-            <polyline points="20 6 9 17 4 12" />
-          </svg>
+            style="font-size: 20px;"
+          />
           <span class="text-base-content/80 text-sm">{feature}</span>
         </li>
       ))
