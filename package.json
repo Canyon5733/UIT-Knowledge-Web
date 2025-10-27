@@ -2,7 +2,6 @@
   "name": "uit-knowledge-web",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.13.1",
   "license": "MIT",
   "private": true,
   "description": "A web project for UIT Knowledge built with Astro.",
