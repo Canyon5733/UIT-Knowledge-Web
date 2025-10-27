@@ -17,6 +17,9 @@ export default ts.config(
   eslintConfigPrettier,
   ...eslintPluginSvelte.configs['flat/prettier'],
   {
+    ignores: ['.astro/**/*'],
+  },
+  {
     languageOptions: {
       globals: {
         ...globals.browser,

@@ -21,7 +21,7 @@ export const socialLinks: SocialLink[] = [
     icon: 'youtube',
   },
   {
-    href: 'https://github.com/Canyon5733/UIT-Knowledge-Web',
+    href: 'https://github.com/UIT-Knowledge/UIT-Knowledge-Web',
     label: 'Github',
     icon: 'github',
   },

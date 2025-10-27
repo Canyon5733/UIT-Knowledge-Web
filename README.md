@@ -15,64 +15,64 @@
 ## Chức năng chính:
 
 - [x] : Ecommerce bán merchandises (Đang thực hiện).
-
 - [ ] : Blog chia sẻ kiến thức, tài liệu học tập (Sẽ thực hiện).
 
-## Hướng dẫn commit
+## Cài đặt và chạy dự án
 
 ```bash
-# Clone dự án / Chỉ sử dụng 1 lần
-git clone https://github.com/Canyon5733/UIT-Knowledge-Web.git
+# Clone dự án
+git clone https://github.com/UIT-Knowledge/UIT-Knowledge-Web.git
 
-# Pull gốc dự án
-git pull origin main
+# Di chuyển vào thư mục dự án
+cd UIT-Knowledge-Web
 
-# Tạo branch dựa theo tên issue đang giải quyết
-git checkout -b {tên_issue/[Ví dụ: issue-1]}
+# Cài đặt dependencies
+pnpm install
 
-# Khởi tạo môi trường dev
-npm run dev
+# Chạy development server
+pnpm dev
 
-# Mở localhost:3000 trên trình duyệt
-
-# Kiểm tra lỗi
-npm run lint
-
-# Format lại mã nguồn cho đúng hình thức
-npm run format
-
-# ! Không làm theo format sẽ bị pre-commit không cho phép commit
-
-# Thêm code đã chỉnh sửa
-git add .
-
-# Đẩy lên theo branch
-git push origin {tên_issue}
-
-# Khi trở lại code, tạo branch mới và tránh xung đột
-git switch main
-
-# Pull mã nguồn từ main
-git pull origin main
-
-# Tiếp tục vòng lặp khi quay lại tạo branch mới và thực hiện các thay đổi
+# Mở http://localhost:3000 trên trình duyệt
 ```
 
-> [!NOTE]
-> Owner/Canyon trước khi merge các branch vào `main` để commit
-> nên review code trước và call qua Discord/Messenger để
-> xem kết quả dev, hỏi ý kiến của người tạo issue/branch qua inbox riêng.
->
-> Và comment LGTM/Looks good to me cho pull request của contributor để
-> báo trước sẽ có commit/merge.
->
-> Các trang và components thì sử dụng `.astro`.
-> Những components nào cần **interactivity (sự tương tác)** thì sử dụng `.svelte`.
->
-> Khi đặt tên file tránh sử dụng chữ hoa, hãy sử dụng chữ thường và dấu gạch nối,
-> ví dụ: `button.svelte` hoặc `navbar-button.svelte`
-> nên tránh: `Button.svelte` hoặc `NavBarButton.svelte`,
-> và import đã hỗ trợ `@/` aliases ở đầu mỗi import nên hãy sử dụng nó nhiều nhất có thể
-> ví dụ `import { hello } from "@/lib/world"` thay vì `import { hello } from "../lib/world"`.
->
-> **Giúp giữ tính nhất quán của toàn bộ mã nguồn**
+## Scripts có sẵn
+
+- `pnpm dev` - Chạy development server
+- `pnpm build` - Build dự án cho production
+- `pnpm preview` - Preview build production
+- `pnpm lint` - Kiểm tra lỗi linting
+- `pnpm format` - Format code theo chuẩn dự án
+
+## Quy tắc phát triển
+
+### Cấu trúc file
+
+```
+UIT-Knowledge-Web/
+├── 📁 src/                          # Source code chính
+│   ├── 📁 components/               # Components tái sử dụng
+│   ├── 📁 layouts/                 # Layout templates
+│   ├── 📁 lib/                     # Utilities và constants
+│   ├── 📁 pages/                   # Pages (routing)
+│   └── 📁 styles/                  # Global styles
+├── 📁 public/                      # Static assets
+├── 📁 .github/                     # GitHub workflows & templates
+├── 📄 astro.config.ts              # Astro configuration
+├── 📄 svelte.config.js             # Svelte configuration
+├── 📄 tsconfig.json                # TypeScript configuration
+├── 📄 package.json                 # Dependencies & scripts
+├── 📄 pnpm-workspace.yaml          # pnpm workspace config
+└── 📄 README.md                    # Project documentation
+```
+
+**Quy tắc đặt tên:**
+
+- **Trang và components tĩnh**: Sử dụng `.astro`
+- **Components tương tác**: Sử dụng `.svelte`
+- **Đặt tên file**: Chữ thường và dấu gạch nối (ví dụ: `button.svelte`, `navbar-button.svelte`)
+- **Import**: Sử dụng `@/` aliases (ví dụ: `import { hello } from "@/lib/world"`)
+
+### Code style
+
+- Tuân thủ ESLint rules
+- Giữ tính nhất quán trong toàn bộ mã nguồn
